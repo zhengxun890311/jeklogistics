@@ -1,0 +1,787 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.1/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+      * {
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+      }
+      body {
+          font-family: 'Roboto', sans-serif;
+      }
+      a {
+          text-decoration: none;
+      }
+      li {
+          list-style: none;
+      }
+
+      .navbar {
+          display: flex;
+          align-items: center;
+          justify-content:space-around;
+          background-color: #ffffff;
+          color: #FF5E14;
+          font-weight: bold;
+      }
+      .nav-links a {
+          color: #101820;
+          font-weight: bold;
+      }
+      .jeklogo{
+        width: 100%;
+        height: 2.5em;
+      }
+      /* LOGO */
+      .logo {
+          font-size: 32px;
+      }
+      /* NAVBAR MENU */
+      .menu {
+          display: flex;
+          gap: 1em;
+          font-size: 18px;
+          z-index: 1;
+      }
+      .menu li:hover {
+          color: #ffffff;
+          border-radius: 5px;
+          transition: 0.3s ease;
+      }
+      .menu li {
+          padding: 5px 14px;
+      }
+      /* DROPDOWN MENU */
+      .services {
+          position: relative;
+      }
+
+      .bright-future{
+        width:100%;
+        height: 50%;
+        display: flex;
+        justify-content: center;
+        padding: 30px;
+      }
+
+      .jek-img {
+        padding: 50px;
+        margin-left: 100px;
+      }
+      
+      .xtreme-intro{
+        padding: 50px;
+      }
+
+      .xtreme-intro h2{
+        font-weight: bold;
+        color:#131D46;
+      }
+
+      .xtreme-intro li{
+        margin: 20px 0px;
+        color: #290000;
+      }
+
+      .fa-arrow-right{
+        color: #FF5E14;
+      }
+
+      /* U.S. Customs Brokerage*/
+      .us-custom-brokerage{
+        position: absolute;
+        top:180px;
+        left: 150px;
+        color: #ffffff;
+        font-weight: bold;
+        font-size: 45px;
+        animation-name: custom-brokerage-animation;
+        animation-duration: 4s;
+      }
+
+      @keyframes custom-brokerage-animation {
+        25%  {left:200px; top:0px;}
+      }
+      /* U.S. Customs Brokerage*/
+
+      /*Connect with an expert*/
+      .btn-transparent-white {
+          font-size: 1rem;
+          font-style: normal;
+          font-weight: 600;
+          line-height: 1.5rem;
+          padding: 1rem 1.5rem;
+          word-break: break-word;
+          border: 1px solid #fff;
+          border-radius: 30px;
+          color: #fff;
+      }
+
+      .btn-transparent-white:hover {
+          color: black;
+          text-decoration: none;
+          background-color: #fff;
+      }
+      /*Connect with an expert*/
+
+      /* About us Start */
+      .about-us{
+        width: 100%;
+        height: auto;
+        background-color:#003057;
+      }
+
+      .about-us h4{
+        color: #FF5E14;
+        text-align: center;
+        font-weight: bold;
+      }
+
+      .about-us h2{
+        color: #ffffff;
+        text-align: center;
+        font-weight: bold;
+      }
+
+      .our-services2-detail{
+        display: flex;
+        justify-content: center;
+      }
+
+      .our-detail{
+        width: 18%;
+        height: auto;
+        border-color: #ffffff;
+        border-style: solid;
+        border-width: thin;
+        justify-content:left;
+        color: #ffffff;
+        margin: 30px;
+      }
+
+      .our-detail li{
+        padding: 5px 14px;
+      }
+
+      .our-detail h3{
+        text-decoration-color:#FF5E14;
+        text-underline-position: under;
+        text-decoration-thickness: 5px;
+        display: flex;
+        justify-content: center;
+      }
+      /* About us End */
+
+      /* Our Service Start */
+      .freight-type{
+        width: 100%;
+        height: auto;
+        background-color:#ffffff;
+        display: flex;
+        justify-content: center;
+      }
+
+      .freight{
+        width: 18%;
+        height: auto;
+        border-width: thin;
+        color: #290000;
+        margin: 30px;
+        text-align: center;
+        margin-left: 50px;
+      }
+
+      .service-img{
+        width: 400px;
+        height: 267px;
+      }
+
+      .trade-img{
+        width: auto;
+        height: 500px;
+      }
+
+      .our-services h4{
+        color: #FF5E14;
+        text-align: center;
+        font-weight: bold;
+      }
+
+      .our-services h2{
+        color: #003057;
+        text-align: center;
+        font-weight: bold;
+      }
+
+      /* Our Service End */
+
+      /* Our Service 2 Start */
+      .our-services2{
+        width: 100%;
+        height: auto;
+        background-color:#003057;
+      }
+
+      .our-services2 h4{
+        color: #FF5E14;
+        text-align: center;
+        font-weight: bold;
+      }
+
+      .our-services2 h2{
+        color: #ffffff;
+        text-align: center;
+        font-weight: bold;
+      }
+
+      .about-detail{
+        display: flex;
+        justify-content: center;
+      }
+
+      .connect-with-expert{
+        display: flex;
+        justify-content: center;
+      }
+
+      .service2-detail{
+        width: 18%;
+        height: auto;
+        border-color: #ffffff;
+        border-style: solid;
+        border-width: thin;
+        justify-content:left;
+        color: #ffffff;
+        margin: 30px;
+      }
+
+      .service2-detail li{
+        padding: 5px 14px;
+      }
+
+      .service2-detail h3{
+        color: #FF5E14;
+        font-weight: bold;
+        text-align: center;
+      }
+      /* Our Service 2 End */
+      
+      input[type=checkbox]{
+          display: none;
+      }
+      /*HAMBURGER MENU*/
+      .hamburger {
+          display: none;
+          font-size: 24px;
+          user-select: none;
+      }
+      /* APPLYING MEDIA QUERIES */
+      @media screen and (min-width:400px) and (max-width:900px) {
+          .menu {
+              display:none;
+              position: absolute;
+              background-color:#ffffff;
+              right: 0;
+              left: 0;
+              text-align: center;
+              padding: 16px 0;
+          }
+          .menu li:hover {
+              display: inline-block;
+              background-color:#ffffff;
+              transition: 0.3s ease;
+          }
+          .menu li + li {
+              margin-top: 12px;
+          }
+          input[type=checkbox]:checked ~ .menu{
+              display: block;
+          }
+          .hamburger {
+              display: block;
+          }
+          
+          .xtreme-img{
+            width: auto;
+            margin-left: 0px;
+            padding: 0px;
+          }
+          .trade-img {
+            width: auto;
+            max-width: 400px;
+            height: auto;
+          }
+
+          .us-custom-brokerage{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            font-size: 30px;
+            transform: translate(-50%, -50%);
+          }
+        
+          .bright-future{
+            width:100%;
+            height: 50%;
+            display: block;
+          }
+
+          .about-detail{
+            display: block;
+          }
+
+          .connect-with-expert{
+            display: flex;
+            justify-content: center;
+          }
+
+          .our-detail{
+            width: auto;
+            height: auto;
+          }
+
+          .our-services2-detail{
+            display: block;
+          }
+
+          .service2-detail{
+            width: auto;
+            height: auto;
+          }
+
+          .freight-type{
+            display: block;
+          }
+
+          .freight{
+            width: auto;
+            height: auto;
+          }
+      }
+      .carousel-inner img {
+        width: 100%;
+        height: 100%;
+      }
+
+
+      .footer {
+        background-color: #0099cc;
+        color: #ffffff;
+        text-align: center;
+        font-size: 12px;
+        padding: 15px;
+      }
+
+    </style>
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="logo">
+        <img src="./logo.jpg" class="jeklogo">
+      </div>
+      <ul class="nav-links">
+        <!-- USING CHECKBOX HACK -->
+        <input type="checkbox" id="checkbox_toggle" />
+        <label for="checkbox_toggle" class="hamburger">&#9776;</label>
+        <!-- NAVIGATION MENUS -->
+        <div class="menu">
+          <li>
+            <a href="#demo">Home</a>
+          </li>
+          <li>
+            <a href="#bright-future">About us</a>
+          </li>
+          <li class="services">
+            <a href="#our-services">Ohter Services</a>
+          </li>
+          <li class="services">
+            <a href="#our-services">Resources</a>
+          </li>
+          <li>
+            <a href="#contact-us">Contact</a>
+          </li>
+        </div>
+      </ul>
+    </nav>
+    <div id="demo" class="carousel slide" data-ride="carousel">
+      <img src="./blank-blue-halftone-background_53876-114466.jpg" alt="Los Angeles" height="500" style="width: 100%;height: 400px;">
+      <div class="us-custom-brokerage">
+        U.S. Customs Brokerage
+      </div>
+    </div>
+
+    <div class="bright-future" id="bright-future">
+      <div class="jek-img">
+        <img src="./customs-broker.jpg" class="trade-img">
+      </div>
+      <div class="xtreme-intro">
+        <h2>
+          Streamlined customs solutions for seamless international trade
+        </h2>
+        <ul>
+          <li>
+            In today’s interconnected global economy, the ability to move goods efficiently across U.S. borders is more than just a necessity—it’s a critical component of staying competitive in the marketplace.
+            At JEK Logistics Inc, we understand the complexities of international trade and how they can impact your business. 
+            That’s why our expert customs brokerage services are designed to do more than meet regulatory requirements
+          </li>
+          <li>
+            Our seasoned customs brokers are dedicated to providing more than just standard entry filings. 
+            We offer comprehensive support for every aspect of your import operations. 
+            From managing entry clearances with precision to implementing advanced customs solutions such as duty drawback, reconciliation programs, and more, we are here to simplify the process and reduce your administrative burden.
+          </li>
+        </ul>
+        <h2>
+          Why Choose Us?
+        </h2>
+        <ul>
+          <li>
+            <i class="fa fa-arrow-right"></i>
+            Expert Guidance: Our brokers are well-versed in U.S. Customs and Border Protection (CBP) regulations, ensuring full compliance while helping you navigate intricate requirements with ease.
+          </li>
+          <li>
+            <i class="fa fa-arrow-right"></i>
+            Customized Solutions: Every business is unique, and so are our strategies. We design personalized solutions to align with your operations and goals.
+          </li>
+          <li>
+            <i class="fa fa-arrow-right"></i>
+            Efficiency and Accuracy: With our support, you can minimize delays, reduce costs, and avoid compliance risks—allowing your goods to move swiftly across borders.
+          </li>
+          <li>
+            <i class="fa fa-arrow-right"></i>
+            Advanced Programs: Take advantage of specialized customs programs like duty drawback and reconciliation to recover costs and enhance your bottom line.
+          </li>
+        </ul>
+      </div>
+    </div>
+    <!--About us Start-->
+    <div class="about-us">
+      <br>
+      <h4>
+        About us
+      </h4>
+      <h2>
+        Customs Brokerage and Compliance Services
+      </h2>
+      <br>
+      <div class="connect-with-expert">
+        <a style="cursor: pointer;" class="btn-transparent-white" title="Connect with an expert | JEK Logistics Inc" onclick="connectExpert()">Connect with an expert</a>
+      </div>
+      <div class="about-detail">
+        <div class="our-detail">
+          <ul>
+            <li>
+              <h3>
+                Importer Security Filing
+              </h3>
+            </li>
+            <li>
+              <i class="fa fa-arrow-right"></i>
+              Through the dedication and expertise of our team, we ensure your ISFs are processed quickly and accurately—streamlining compliance and enhancing performance. 
+              Rely on our professionals to manage the entire filing process, helping you reduce costs while boosting operational efficiency.
+            </li>
+          </ul>
+        </div>
+        <div class="our-detail">
+          <ul>
+            <li>
+              <h3>
+                Customs Clearance
+              </h3>
+            </li>
+            <li>
+              <i class="fa fa-arrow-right"></i>
+              Let our customs clearance specialists streamline your import process with precision and efficiency. 
+              From navigating intricate documentation requirements to managing timely filings, we ensure your shipments comply with U.S. Customs and Border Protection (CBP) regulations. 
+              Trust our expertise to minimize delays, reduce risks, and provide seamless clearance solutions tailored to your business needs.
+            </li>
+          </ul>
+        </div>
+        <div class="our-detail">
+          <ul>
+            <li>
+              <h3>
+                Customs Bonds
+              </h3>
+            </li>
+            <li>
+              <i class="fa fa-arrow-right"></i>
+              Prevent disruptions to your U.S. imports by proactively managing the essential yet often-overlooked customs bond. 
+              At JEK Logistics, our trusted experts provide comprehensive support, streamlining the bond filing process and guiding you toward the most cost-effective bond options for your imports. 
+              Rely on us to help you minimize risk, control costs, and keep your supply chain running smoothly.
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="about-detail">
+        <div class="our-detail">
+          <ul>
+            <li>
+              <h3>
+                Live Entry
+              </h3>
+            </li>
+            <li>
+              <i class="fa fa-arrow-right"></i>
+              Ensure your shipments move swiftly with our live entry customs clearance services. 
+              Live entry filing expedites the clearance process by submitting entry documentation as soon as your cargo arrives at U.S. borders. 
+              Our experienced team works in real-time to manage required filings, coordinate with U.S. Customs and Border Protection (CBP), and address any potential issues immediately. 
+              Trust us to provide seamless, fast-tracked customs solutions that minimize delays and keep your supply chain moving efficiently.
+            </li>
+          </ul>
+        </div>
+        <div class="our-detail">
+          <ul>
+            <li>
+              <h3>
+                ATA Carnet
+              </h3>
+            </li>
+            <li>
+              <i class="fa fa-arrow-right"></i>
+              Simplify your international trade process with our expert carnet customs clearance services.
+              A carnet, also known as a “merchandise passport,” allows for the temporary importation of goods without paying duties or taxes in participating countries. 
+              Our team specializes in managing carnet documentation, ensuring compliance with international regulations, and facilitating smooth border crossings.
+              Trust us to handle the complexities, so you can focus on expanding your global reach with confidence and ease.
+            </li>
+          </ul>
+        </div>
+        <div class="our-detail">
+          <ul>
+            <li>
+              <h3>
+                Live Entry
+              </h3>
+            </li>
+            <li>
+              <i class="fa fa-arrow-right"></i>
+              Ensure your shipments move swiftly with our live entry customs clearance services. 
+              Live entry filing expedites the clearance process by submitting entry documentation as soon as your cargo arrives at U.S. borders. 
+              Our experienced team works in real-time to manage required filings, coordinate with U.S. Customs and Border Protection (CBP), and address any potential issues immediately. 
+              Trust us to provide seamless, fast-tracked customs solutions that minimize delays and keep your supply chain moving efficiently.
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!--About us end-->
+
+    <!--our services start-->
+    <div class="our-services" id="our-services">
+      <br>
+      <h4>
+        Ohter Services
+      </h4>
+      <h2>
+        Delivering The Best Global Logistics Solutions.
+      </h2>
+      <div class="freight-type">
+        <div class="freight">
+          <img class="service-img" src="./customs.jpg">
+          <h5>Insurance</h5>
+        </div>
+        <div class="freight">
+          <img class="service-img" src="./freight.jpg">
+          <h5>Ocean and Air Freight</h5>
+        </div>
+        <div class="freight">
+          <img class="service-img" src="./warehouse.jpg">
+          <h5>Warehousing & Distribution</h5>
+        </div>
+      </div>
+
+      <div class="freight-type">
+        <div class="freight">
+          <img src="./ground.jpg">
+          <h5>Inland Transportations</h5>
+        </div>
+        <div class="freight">
+          <img class="service-img" src="./project.jpg">
+          <h5>Global Break-Bulk Service</h5>
+        </div>
+        <div class="freight">
+          <img class="service-img" src="./Automobile.jpg">
+          <h5>Automobile Lading</h5>
+          <ul>
+            <li>
+              Global Break-Bulk Service
+            </li>
+            <li>
+              Project Cargo
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!--our services end-->
+
+    <!--our services 2 Start-->
+    <div class="our-services2">
+      <br>
+      <h2>
+        Smooth customs clearances and logistics service start here
+      </h2>
+      <div class="our-services2-detail">
+        <div class="service2-detail">
+          <h3>
+            &nbsp;Freight Forwarding
+          </h3>
+          <ul>
+            <li>
+              <i class="fa fa-circle-o"></i>
+              Worldwide shipping solutions by air, sea, and land
+            </li>
+            <li>
+              <i class="fa fa-circle-o"></i>
+              Identify the optimal route for delivering your products
+            </li>
+            <li>
+              <i class="fa fa-circle-o"></i>
+              Consolidate shipments for more cost-effective pricing
+            </li>
+            <li>
+              <i class="fa fa-circle-o"></i>
+              Stay updated on shipment progress with quick responses
+            </li>
+            <li>
+              <i class="fa fa-circle-o"></i>
+              Enjoy seamless transitions between freight and customs
+            </li>
+            <li>
+              <i class="fa fa-circle-o"></i>
+              Be confident that your compliance requirements are satisfied
+            </li>
+            <li>
+              <i class="fa fa-circle-o"></i>
+              Customs clearance services
+            </li>
+          </ul>
+        </div>
+        <div class="service2-detail">
+          <h3>
+            &nbsp;Inland Transportations
+          </h3>
+          <ul>
+            <li>
+              <i class="fa fa-circle-o"></i>
+              Ocean drayage, Less-than-Truckload (LTL), Full Truckload (FTL)
+            </li>
+            <li>
+              <i class="fa fa-circle-o"></i>
+              Standard dry vans, food-grade containers, refrigerated units
+            </li>
+            <li>
+              <i class="fa fa-circle-o"></i>
+              Flatbeds and specialized Conestoga flatbeds
+            </li>
+            <li>
+              <i class="fa fa-circle-o"></i>
+              Oversized loads, Double Drops, and Removable Gooseneck (RGN) trailers
+            </li>
+          </ul>
+        </div>
+        <div class="service2-detail">
+          <h3>
+            &nbsp;
+            Warehouse Management System
+          </h3>
+          <ul>
+            <li>
+              <i class="fa fa-circle-o"></i>
+              Receiving and inspection
+            </li>
+            <li>
+              <i class="fa fa-circle-o"></i>
+              Transloading and transfer
+            </li>
+            <li>
+              <i class="fa fa-circle-o"></i>
+              Order picking and packing
+            </li>
+            <li>
+              <i class="fa fa-circle-o"></i>
+              Assembly and configuration
+            </li>
+            <li>
+              <i class="fa fa-circle-o"></i>
+              Kitting and bundling
+            </li>
+            <li>
+              <i class="fa fa-circle-o"></i>
+              Product packaging
+            </li>
+            <li>
+              <i class="fa fa-circle-o"></i>
+              E-commerce order fulfillment
+            </li>
+            <li>
+              <i class="fa fa-circle-o"></i>
+              Returns management
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!--our services 2 end-->
+
+    <div class="our-services contact-us" id="contact-us">
+      <br>
+      <h4>
+        Contact Details
+      </h4>
+      <h2>
+        Get In Touch
+      </h2>
+      <div class="freight-type">
+        <div class="freight">
+          <ul>
+            <li style="margin: 5px 14px;text-align: left;">
+              <p>
+                <label style="color: #2F4760;">Main Office</label>
+              </p>
+              <ul>
+                <li>
+                  <label style="color: #2F4760;">1010 Crenshaw Blvd Suite 220</label>
+                </li>
+                <li>
+                  <label style="color: #2F4760;">Torrance, CA 90501</label>
+                </li>
+              </ul>
+            </li>
+            <li style="margin: 5px 14px;text-align: left;">
+              <p>
+                <label style="color: #2F4760;">Phone:424-757-6678</label>
+              </p>
+              <p>
+                <label style="color: #2F4760;">Fax:310-366-7799</label>
+              </p>
+              <p>
+                <label style="color: #2F4760;">Email:operation@jeklogistics.com</label>
+              </p>
+            </li>
+          </ul>
+        </div>
+        <div class="freight" style="width: 100%">
+          <iframe width="100%" height="600" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=1010%20Crenshaw%20Blvd%20Suite%20220,Torrance,%20CA%2090501+(Your%20Business%20Name)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed">
+            <a href="https://www.gps.ie/sport-gps/">bike gps</a>
+          </iframe>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer">
+      <p>© Copyright 2023 - 2028 JEK Logistics Inc.All rights reserved.</p>
+    </div>
+    <script>
+      function connectExpert(){
+        window.location.href = "mailto:operation@jeklogistics.com?subject=Inquiry Subject&body=Inquiry";
+      }
+    </script>
+  </body>
+</html>
