@@ -6,6 +6,7 @@
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.1/dist/jquery.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <style>
       * {
@@ -272,6 +273,40 @@
         text-align: center;
       }
       /* Our Service 2 End */
+
+      /* faqs Start */
+      .faqs{
+        width: 100%;
+        height: auto;
+        background-color:#003057;
+      }
+
+      .faqs .faqsTitle h4{
+        color: #FF5E14;
+        text-align: center;
+        font-weight: bold;
+      }
+
+      .faqs .faqQuestionAnswer{
+        text-align: center;
+        font-weight: bold;
+        border-bottom: #fff;
+      }
+
+      .faqs .faqQuestion{
+        cursor: pointer;
+      }
+
+      .faqs .faqAnswer{
+        display: none;
+      }
+
+      .faqs h2{
+        color: #ffffff;
+        text-align: center;
+        font-weight: bold;
+      }
+      /* faqs End */
       
       input[type=checkbox]{
           display: none;
@@ -399,7 +434,7 @@
             <a href="#bright-future">About us</a>
           </li>
           <li class="services">
-            <a href="#our-services">Ohter Services</a>
+            <a href="#our-services">Other Services</a>
           </li>
           <li class="services">
             <a href="#our-services">Resources</a>
@@ -478,13 +513,14 @@
           <ul>
             <li>
               <h3>
-                Importer Security Filing
+                Customs Bonds
               </h3>
             </li>
             <li>
               <i class="fa fa-arrow-right"></i>
-              Through the dedication and expertise of our team, we ensure your ISFs are processed quickly and accurately—streamlining compliance and enhancing performance. 
-              Rely on our professionals to manage the entire filing process, helping you reduce costs while boosting operational efficiency.
+              Prevent disruptions to your U.S. imports by proactively managing the essential yet often-overlooked customs bond. 
+              At JEK Logistics, our trusted experts provide comprehensive support, streamlining the bond filing process and guiding you toward the most cost-effective bond options for your imports. 
+              Rely on us to help you minimize risk, control costs, and keep your supply chain running smoothly.
             </li>
           </ul>
         </div>
@@ -507,14 +543,13 @@
           <ul>
             <li>
               <h3>
-                Customs Bonds
+                Importer Security Filing
               </h3>
             </li>
             <li>
               <i class="fa fa-arrow-right"></i>
-              Prevent disruptions to your U.S. imports by proactively managing the essential yet often-overlooked customs bond. 
-              At JEK Logistics, our trusted experts provide comprehensive support, streamlining the bond filing process and guiding you toward the most cost-effective bond options for your imports. 
-              Rely on us to help you minimize risk, control costs, and keep your supply chain running smoothly.
+              Through the dedication and expertise of our team, we ensure your ISFs are processed quickly and accurately—streamlining compliance and enhancing performance. 
+              Rely on our professionals to manage the entire filing process, helping you reduce costs while boosting operational efficiency.
             </li>
           </ul>
         </div>
@@ -552,6 +587,21 @@
             </li>
           </ul>
         </div>
+        <div class="our-detail">
+          <ul>
+            <li>
+              <h3>
+                T&E , IT
+              </h3>
+            </li>
+            <li>
+              <i class="fa fa-arrow-right"></i>
+              Simplify customs clearance with our expertise in T&E (Transportation and Exportation) and IT (Immediate Transportation) filings. 
+              These specialized customs entries allow seamless movement of your goods under bond, whether transiting through the U.S. or moving between ports. 
+              Our team ensures accuracy and compliance with all CBP regulations, minimizing delays and optimizing your supply chain. Let us handle the complexities so you can focus on your business.
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
     <!--About us end-->
@@ -560,66 +610,116 @@
     <div class="our-services" id="our-services">
       <br>
       <h4>
-        Ohter Services
+        Other Services
       </h4>
       <h2>
         Delivering The Best Global Logistics Solutions.
       </h2>
       <div class="freight-type">
         <div class="freight">
-          <img class="service-img" src="./customs.jpg">
-          <h5>Insurance</h5>
-        </div>
-        <div class="freight">
-          <img class="service-img" src="./freight.jpg">
-          <h5>Ocean and Air Freight</h5>
+          <img class="service-img" src="./insurance.jpg">
+          <h5>Freight Insurance</h5>
         </div>
       </div>
     </div>
     <!--our services end-->
 
     <!--our services 2 Start-->
-    <div class="our-services2">
-      <br>
-      <h2>
-        Smooth customs clearances and logistics service start here
-      </h2>
-      <div class="our-services2-detail">
-        <div class="service2-detail">
-          <h3>
-            &nbsp;Freight Forwarding
-          </h3>
-          <ul>
-            <li>
-              <i class="fa fa-circle-o"></i>
-              Worldwide shipping solutions by air, sea, and land
-            </li>
-            <li>
-              <i class="fa fa-circle-o"></i>
-              Identify the optimal route for delivering your products
-            </li>
-            <li>
-              <i class="fa fa-circle-o"></i>
-              Consolidate shipments for more cost-effective pricing
-            </li>
-            <li>
-              <i class="fa fa-circle-o"></i>
-              Stay updated on shipment progress with quick responses
-            </li>
-            <li>
-              <i class="fa fa-circle-o"></i>
-              Enjoy seamless transitions between freight and customs
-            </li>
-            <li>
-              <i class="fa fa-circle-o"></i>
-              Be confident that your compliance requirements are satisfied
-            </li>
-            <li>
-              <i class="fa fa-circle-o"></i>
-              Customs clearance services
-            </li>
-          </ul>
+    <div class="faqs">
+      <div class="faqsTitle">
+        <h4>
+          Other Services
+        </h4>
+      </div>
+      <div class="faqQuestionAnswer" style="color: white;">
+        <div class="faqQuestion" id="faqQuestion1">
+           <h4 class="title"> 
+            How long does a annual bond valid? 
+          </h4>
         </div>
+        <div class="faqAnswer" id="faqAnswer1">
+           <p>
+              An annual bond is valid for 1 year from puchasing date date
+            </p>
+        </div>
+        <!-- .faqAnswer -->
+      </div>
+      <div class="faqQuestionAnswer" style="color: white;">
+        <div class="faqQuestion" id="faqQuestion2">
+          <h4 class="title"> 
+            What's the current MPF(Merchandise Processing Fee) rate ?
+          </h4>
+        </div>
+        <div class="faqAnswer" id="faqAnswer2">
+          <p>
+            The MPF rate for formal entries is 0.3464% of the entered value of the merchandise, with a minimum and maximum fee ($29.66 minimum and $575 maximum, as of 2025)
+          </p>
+        </div>
+        <!-- .faqAnswer -->
+     </div>
+
+     <div class="faqQuestionAnswer" style="color: white;">
+      <div class="faqQuestion" id="faqQuestion3">
+        <h4 class="title"> 
+          What's the current HMF(Harbor Maintenance Fee) rate ?
+        </h4>
+      </div>
+      <div class="faqAnswer" id="faqAnswer3">
+        <p>
+          The HMF rate for formal entries is 0.125% of the entered value of the merchandise is only for ocean shipment and there is with no minimum and maximum fee.
+        </p>
+      </div>
+      <!-- .faqAnswer -->
+      </div>
+
+      <div class="faqQuestionAnswer" style="color: white;">
+        <div class="faqQuestion" id="faqQuestion4">
+          <h4 class="title">
+            What's Frob?
+          </h4>
+        </div>
+        <div class="faqAnswer" id="faqAnswer4">
+          <p>
+            Frob is also requiring ISF filing
+          </p>
+        </div>
+        <!-- .faqAnswer -->
+      </div>
+
+      <div class="faqQuestionAnswer" style="color: white;">
+        <div class="faqQuestion" id="faqQuestion5">
+          <h4 class="title">
+            How long does the custom exam takes ?
+          </h4>
+        </div>
+        <div class="faqAnswer" id="faqAnswer5">
+          <p>
+            Custom exam depending on what kind of exams and differnt exam time period is different
+          </p>
+        </div>
+        <!-- .faqAnswer -->
+      </div>
+
+      <div class="faqQuestionAnswer" style="color: white;">
+        <div class="faqQuestion" id="faqQuestion6">
+          <h4 class="title">
+            Do customs brokers needs to receive POA ,business license , government issued photo ID before proceed ISF filing , customs clearance  ?
+          </h4>
+        </div>
+        <div class="faqAnswer" id="faqAnswer6">
+          <p>
+            This is because CBP strictly requires all customs brokers to confirm POA when they received POA. CBP is becoming more specific and strict about importer verification recently. 
+            Please understand that all customs brokers such as Fedex, UPS, other large and local customs must follow CBP’s requirement.
+          </p>
+          <p>
+            https://www.cbp.gov/trade/programs-administration/customs-brokers/validating-power-attorney
+          </p>
+          <p>
+            https://www.cbp.gov/sites/default/files/assets/documents/2022-Oct/CBP%20Publication%20%232034-1022%20-%20Power%20of%20Attorney%20Job%20Aid.pdf
+          </p>
+          </p>
+        </div>
+        <!-- .faqAnswer -->
       </div>
     </div>
     <!--our services 2 end-->
@@ -637,11 +737,15 @@
           <ul>
             <li style="margin: 5px 14px;text-align: left;">
               <p>
-                <label style="color: #2F4760;">Main Office</label>
+                <label style="color: #2F4760;">
+                  <b>
+                    Main Office
+                  </b>
+                </label>
               </p>
               <ul>
                 <li>
-                  <label style="color: #2F4760;">1010 Crenshaw Blvd Suite 220</label>
+                  <label style="color: #2F4760;">1010 Crenshaw Blvd # 220</label>
                 </li>
                 <li>
                   <label style="color: #2F4760;">Torrance, CA 90501</label>
@@ -656,7 +760,7 @@
                 <label style="color: #2F4760;">Fax:310-366-7799</label>
               </p>
               <p>
-                <label style="color: #2F4760;">Email:operation@jeklogistics.com</label>
+                <a href="mailto:operation@jeklogistics.com?subject=Inquiry Subject&body=Inquiry">Email:operation@jeklogistics.com</a>
               </p>
             </li>
           </ul>
@@ -668,11 +772,42 @@
         </div>
       </div>
     </div>
-
     <div class="footer">
       <p>© Copyright 2023 - 2028 JEK Logistics Inc.All rights reserved.</p>
     </div>
     <script>
+      $(document).ready(function(){
+        $("#faqQuestion1").click(function(){
+          $("#faqAnswer1").slideToggle("slow");
+        });
+
+        $("#faqQuestion2").click(function(){
+          $("#faqAnswer2").slideToggle("slow");
+        });
+
+        $("#faqQuestion3").click(function(){
+          $("#faqAnswer3").slideToggle("slow");
+        });
+
+        $("#faqQuestion4").click(function(){
+          $("#faqAnswer4").slideToggle("slow");
+        });
+
+        $("#faqQuestion5").click(function(){
+          $("#faqAnswer5").slideToggle("slow");
+        });
+
+        $("#faqQuestion6").click(function(){
+          $("#faqAnswer6").slideToggle("slow");
+        });
+      });
+
+      function onClickFAQ(param){
+        var faqQuestion = "#faqQuestion"+param
+        var faqAnswer = "#faqAnswer"+param
+        $(faqQuestion).slideToggle("slow");
+      }
+
       function connectExpert(){
         window.location.href = "mailto:operation@jeklogistics.com?subject=Inquiry Subject&body=Inquiry";
       }
