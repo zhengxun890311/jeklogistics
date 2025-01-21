@@ -95,6 +95,14 @@
         color: #FF5E14;
       }
 
+      .fa-arrow-down{
+        color: #FF5E14;
+      }
+
+      .fa-arrow-up{
+        color: #FF5E14;
+      }
+
       /* U.S. Customs Brokerage*/
       .us-custom-brokerage{
         position: absolute;
@@ -281,7 +289,7 @@
         background-color:#003057;
       }
 
-      .faqs .faqsTitle h4{
+      .faqs .faqsTitle h4,h6{
         color: #FF5E14;
         text-align: center;
         font-weight: bold;
@@ -625,43 +633,55 @@
     <!--our services end-->
 
     <!--our services 2 Start-->
-    <div class="faqs">
+    <div class="faqs" id="faqs">
       <div class="faqsTitle">
         <h4>
           FAQS
         </h4>
+        <h6>
+          Please click on the question to view the answer
+        </h6>
       </div>
       <div class="faqQuestionAnswer" style="color: white;">
-        <div class="faqQuestion" id="faqQuestion1">
+        <div class="faqQuestion" id="faqQuestion1" onclick="slideUpDown('faqAnswer1')">
            <h4 class="title"> 
-            How long does a annual bond valid? 
+            How long is an annual bond valid?
+            <i class="fa fa-arrow-down" id="faarrow1"></i>
           </h4>
         </div>
         <div class="faqAnswer" id="faqAnswer1">
            <p>
-              An annual bond is valid for 1 year from puchasing date date
-            </p>
+            An annual bond remains valid for one year from the date of purchase.
+           </p>
         </div>
         <!-- .faqAnswer -->
       </div>
+      <br>
+
       <div class="faqQuestionAnswer" style="color: white;">
-        <div class="faqQuestion" id="faqQuestion2">
+        <div class="faqQuestion" id="faqQuestion2" onclick="slideUpDown('faqAnswer2')">
           <h4 class="title"> 
-            What's the current MPF(Merchandise Processing Fee) rate ?
+            What is the current rate for the Merchandise Processing Fee (MPF)?
+            <i class="fa fa-arrow-down" id="faarrow2"></i>
           </h4>
         </div>
         <div class="faqAnswer" id="faqAnswer2">
           <p>
-            The MPF rate for formal entries is 0.3464% of the entered value of the merchandise, with a minimum and maximum fee ($29.66 minimum and $575 maximum, as of 2025)
+            The Merchandise Processing Fee (MPF) rate for formal entries is 0.3464% of the entered value of the merchandise. 
+          </p>
+          <p>  
+          However, it is subject to a minimum fee of $29.66 and a maximum fee of $575, as of 2025.
           </p>
         </div>
         <!-- .faqAnswer -->
      </div>
+     <br>
 
      <div class="faqQuestionAnswer" style="color: white;">
-      <div class="faqQuestion" id="faqQuestion3">
+      <div class="faqQuestion" id="faqQuestion3" onclick="slideUpDown('faqAnswer3')">
         <h4 class="title"> 
-          What's the current HMF(Harbor Maintenance Fee) rate ?
+          What is the current rate for the Harbor Maintenance Fee (HMF)?
+          <i class="fa fa-arrow-down" id="faarrow3"></i>
         </h4>
       </div>
       <div class="faqAnswer" id="faqAnswer3">
@@ -671,67 +691,90 @@
       </div>
       <!-- .faqAnswer -->
       </div>
+      <br>
 
       <div class="faqQuestionAnswer" style="color: white;">
-        <div class="faqQuestion" id="faqQuestion4">
+        <div class="faqQuestion" id="faqQuestion4" onclick="slideUpDown('faqAnswer4')">
           <h4 class="title">
-            What's Frob?
+            What's FROB(Foreign Cargo Remaining on Board)?
+            <i class="fa fa-arrow-down" id="faarrow4"></i>
           </h4>
         </div>
         <div class="faqAnswer" id="faqAnswer4">
           <p>
-            Frob is also requiring ISF filing
+            "FROB" in customs clearance refers to Freight Remaining on Board. 
+          </p>
+          <p>
+            This term is used for cargo that arrives at a U.S. port or airport but is not intended for importation into the United States.
+          </p>
+          <p>
+            Instead, the cargo is in transit and will continue to another destination outside the U.S.
+          </p>
+          <p>
+            Freight Remaining On Board (FROB) shipments also require an Importer Security Filing (ISF).
           </p>
         </div>
         <!-- .faqAnswer -->
       </div>
+      <br>
 
       <div class="faqQuestionAnswer" style="color: white;">
-        <div class="faqQuestion" id="faqQuestion5">
+        <div class="faqQuestion" id="faqQuestion5" onclick="slideUpDown('faqAnswer5')">
           <h4 class="title">
-            How long does the custom exam takes ?
+            How long the customs examination process typically takes?
+            <i class="fa fa-arrow-down" id="faarrow5"></i>
           </h4>
         </div>
         <div class="faqAnswer" id="faqAnswer5">
           <p>
-            Custom exam depending on what kind of exams and differnt exam time period is different
+            The duration of a customs exam can vary depending on several factors, such as the type of exam (e.g., physical inspection, x-ray scan, etc.),
+          </p>
+          <p>
+              the complexity of the shipment and the volume of items being processed.
           </p>
         </div>
         <!-- .faqAnswer -->
       </div>
+      <br>
 
       <div class="faqQuestionAnswer" style="color: white;">
-        <div class="faqQuestion" id="faqQuestion6">
+        <div class="faqQuestion" id="faqQuestion6" onclick="slideUpDown('faqAnswer6')">
           <h4 class="title">
-            Do customs brokers needs to receive POA ,business license , government issued photo ID before proceed ISF filing , customs clearance  ?
+            Do customs brokers require a Power of Attorney (POA), business license, governmentissued photo ID 
+          </h4>
+          <h4 class="title">
+             before proceeding with ISF filing and customs clearance?
+             <i class="fa fa-arrow-down" id="faarrow6"></i>
           </h4>
         </div>
         <div class="faqAnswer" id="faqAnswer6">
           <p>
-            This is because CBP strictly requires all customs brokers to confirm POA when they received POA. CBP is becoming more specific and strict about importer verification recently. 
-            Please understand that all customs brokers such as Fedex, UPS, other large and local customs must follow CBP’s requirement.
+            1.Power of Attorney (POA): <br>A signed POA is required for the customs broker to act on behalf of the importer to file documents and clear goods through customs.
           </p>
           <p>
-            https://www.cbp.gov/trade/programs-administration/customs-brokers/validating-power-attorney
+            2.Business License: <br>This helps verify the legitimacy of the business involved in the import process, and it may be required for certain filings.
           </p>
           <p>
-            https://www.cbp.gov/sites/default/files/assets/documents/2022-Oct/CBP%20Publication%20%232034-1022%20-%20Power%20of%20Attorney%20Job%20Aid.pdf
+            3.Government Issued Photo ID: <br>This is typically required from the person signing the POA, ensuring that the person is authorized to represent the business in the customs process.
+          </p>
+          <p>
+            Please click <a target="_blank" href="https://www.cbp.gov/trade/programs-administration/customs-brokers/validating-power-attorney"> here</a> for more information on validating the Power of Attorney and electronic signatures.
+          </p>
+          <p>
+            Please click <a target="_blank" href="https://www.cbp.gov/sites/default/files/assets/documents/2022-Oct/CBP%20Publication%20%232034-1022%20-%20Power%20of%20Attorney%20Job%20Aid.pdf"> here</a> for more information on Power of Attorney
           </p>
           </p>
         </div>
         <!-- .faqAnswer -->
       </div>
+      <br>
     </div>
-    <!--our services 2 end-->
 
     <div class="our-services contact-us" id="contact-us">
       <br>
       <h4>
         Contact Details
       </h4>
-      <h2>
-        Get In Touch
-      </h2>
       <div class="freight-type">
         <div class="freight">
           <ul>
@@ -776,38 +819,66 @@
       <p>© Copyright 2023 - 2028 JEK Logistics Inc.All rights reserved.</p>
     </div>
     <script>
-      $(document).ready(function(){
-        $("#faqQuestion1").click(function(){
-          $("#faqAnswer1").slideToggle("slow");
-        });
+      /*
+        FAQ slide up and down function
+      */
+      function slideUpDown(param){
+        var faqAnswer = $("#"+param);
+        var faqQuestion = "";
+        var faArrow = "";
+        switch(param){
+          case "faqAnswer1":
+            faqQuestion = "faqQuestion1";
+            faArrow = "faarrow1"
+            break;
 
-        $("#faqQuestion2").click(function(){
-          $("#faqAnswer2").slideToggle("slow");
-        });
+          case "faqAnswer2":
+            faqQuestion = "faqQuestion2";
+            faArrow = "faarrow2"
+            break;
 
-        $("#faqQuestion3").click(function(){
-          $("#faqAnswer3").slideToggle("slow");
-        });
+          case "faqAnswer3":
+            faqQuestion = "faqQuestion3";
+            faArrow = "faarrow3"
+            break;
 
-        $("#faqQuestion4").click(function(){
-          $("#faqAnswer4").slideToggle("slow");
-        });
+          case "faqAnswer4":
+            faqQuestion = "faqQuestion4";
+            faArrow = "faarrow4"
+            break;
 
-        $("#faqQuestion5").click(function(){
-          $("#faqAnswer5").slideToggle("slow");
-        });
+          case "faqAnswer5":
+            faqQuestion = "faqQuestion5";
+            faArrow = "faarrow5"
+            break;
+          
+          case "faqAnswer6":
+            faqQuestion = "faqQuestion6";
+            faArrow = "faarrow6"
+            break;
+        }
 
-        $("#faqQuestion6").click(function(){
-          $("#faqAnswer6").slideToggle("slow");
-        });
-      });
-
-      function onClickFAQ(param){
-        var faqQuestion = "#faqQuestion"+param
-        var faqAnswer = "#faqAnswer"+param
-        $(faqQuestion).slideToggle("slow");
+        if(faqAnswer.is(":visible")){
+          faqAnswer.slideUp();
+          document.getElementById(faqQuestion).style.color="white"
+          document.getElementById(faArrow).classList.remove('fa-arrow-up');
+          document.getElementById(faArrow).classList.add('fa-arrow-down');
+          
+        }
+        else{
+          faqAnswer.slideDown();
+          document.getElementById(param).style.textDecoration = "underline #FF5E14";
+          document.getElementById(param).style.textUnderlineOffset = "5px";
+          document.getElementById(param).style.textDecorationThickness = "5px";
+          document.getElementById(faqQuestion).style.color="#FF5E14"
+          document.getElementById(faArrow).classList.remove('fa-arrow-down');
+          document.getElementById(faArrow).classList.add('fa-arrow-up');
+        }
       }
 
+      /*
+        Connect expert function
+      */
       function connectExpert(){
         window.location.href = "mailto:operation@jeklogistics.com?subject=Inquiry Subject&body=Inquiry";
       }
